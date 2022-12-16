@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "api"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Julian Stephens <julian@julianstephens.net>"]
@@ -15,6 +15,7 @@ alembic = "^1.9.0"
 python-dotenv = "^0.21.0"
 asyncpg = "^0.27.0"
 loguru = "^0.6.0"
+pyjwt = {extras = ["crypto"], version = "^2.6.0"}
 
 
 [tool.poetry.group.dev.dependencies]
@@ -27,8 +28,8 @@ flake8-pyproject = "^1.2.2"
 
 [tool.flake8]
 per-file-ignores = [
-  "api/*/__init__.py:F401",
-  "api/*/__init__.py:W391",
+  "app/*/__init__.py:F401",
+  "app/*/__init__.py:W391",
 ]
 max-line-length = 88
 

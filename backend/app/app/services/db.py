@@ -3,7 +3,7 @@ from pydantic import PostgresDsn
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 
-from api.services import settings
+from app.services import settings
 
 
 pg_dsn: PostgresDsn = settings["DB_URI"]

@@ -21,7 +21,7 @@ show:             ## Show the current environment.
 .PHONY: run
 run:             ## Run the current project.
 	@echo "Starting server..."
-	$(ENV_PREFIX)uvicorn --reload --host=0.0.0.0 api.main:app
+	$(ENV_PREFIX)uvicorn --reload --host=0.0.0.0 app.main:app
 
 .PHONY: install
 install:          ## Install the project in dev mode.
