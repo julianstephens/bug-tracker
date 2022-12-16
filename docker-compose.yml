@@ -13,6 +13,16 @@ services:
       - ${DB_PORT_FORWARD}:${DB_PORT}
     restart: always
 
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_USER}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_PASSWORD}
+    ports:
+      - ${PG_PORT_FORWARD}:${PG_PORT}
+
   redis: 
     image: redis/redis-stack:latest
     container_name: bug_redis
